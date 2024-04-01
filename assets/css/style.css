@@ -1,0 +1,238 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Blinker:wght@100;200;300;400;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@100..900&family=Lexend:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Space+Grotesk:wght@300..700&display=swap');
+
+/* Define custom fonts */
+@font-face {
+    font-family: 'Telegraf UltraBold';
+    src: url('../font/Telegraf/PPTelegraf-UltraBold.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Telegraf Regular';
+    src: url('../font/Telegraf/PPTelegraf-Regular.otf') format('opentype');
+}
+
+/* Resetting default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+
+/* Body styles */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #0d0d0d;
+}
+
+/* Title text styles */
+.title-text h1 {
+    font-family: "Telegraf Regular", sans-serif;
+    color: #fff;
+    font-size: 6.5rem;
+    text-align: center;
+    letter-spacing: -4px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeInAnimation 2s ease-in-out forwards;
+    margin-bottom: 50px;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Background image styles */
+.bg-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/bg-gradient.png');
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+/* Quote box styles */
+.quotebox {
+    text-align: center; /* Center align the content within the quotebox */
+}
+
+/* Wrapper styles */
+.wrapper {
+    width: calc(605px + 1.5625vw);
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.327);
+    backdrop-filter: blur(10px); /* Creating a blurred effect */
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.147);
+    border-radius: 20px;
+    padding: 30px;
+    display: inline-block; /* Change display property to inline-block */
+    animation: fadeInAnimation 2.5s ease-in-out forwards;
+}
+
+header, .content :where(i, p, span){
+    color: #ffffff;
+}
+
+/* Header styles */
+.wrapper header {
+    font-family: "Telegraf Regular", sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Content styles */
+.wrapper .content {
+    margin: 35px 0;
+}
+
+/* Quote area styles */
+.content .quote-area {
+    display: flex;
+    justify-content: center;
+}
+
+/* Quote icon styles */
+.quote-area i {
+    font-size: 25px;
+}
+
+.quote-area i:first-child {
+    margin: 3px 10px 0 0;
+}
+
+.quote-area i:last-child {
+    display: flex;
+    align-items: flex-end;
+    margin: 0px 0px 3px 10px;
+}
+
+/* Quote text styles */
+.quote-area .quote {
+    font-size: 30px;
+    text-align: center;
+    word-break: break-all;
+}
+
+/* Author styles */
+.content .author {
+    display: flex;
+    font-size: 22px;
+    font-style: italic;
+    margin-top: 25px;
+    justify-content: flex-end;
+}
+
+.author span:first-child {
+    margin: -7px 5px 0 0;
+    font-family: monospace;
+}
+
+/* Buttons container styles */
+.wrapper .buttons {
+    border-top: 1px solid #cccccc3f;
+    margin-top: 30px;
+}
+
+/* Features container styles */
+.buttons .features {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+/* Features list styles */
+.features ul {
+    display: flex;
+}
+
+.features ul li {
+    margin: 0 5px;
+    height: 47px;
+    width: 47px;
+    display: flex;
+    cursor: pointer;
+    color: #ffffff;
+    list-style: none;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.features ul li:first-child {
+    margin-left: 0;
+}
+
+ul li:is(:hover, .active) {
+    color: #0d0d0d;
+    background: #ffffff;
+}
+
+ul .speech.active {
+    pointer-events: none;
+}
+
+/* Button styles */
+.buttons button {
+    font-family: "Telegraf Regular", sans-serif;
+    border: none;
+    color: #0d0d0d;
+    background: #ffffff;
+    outline: none;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 13px 22px;
+    border-radius: 30px;
+}
+
+.buttons button.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* Media query for responsiveness */
+@media only screen and (max-width: 600px) {
+
+    .bg-image {
+        background-image: url('../img/bg-600px.png');
+    }
+
+    .wrapper {
+        width: 90%; /* Adjust width as needed */
+        max-width: 100%; /* Adjust max width as needed */
+    }
+
+    .title-text h1 {
+        font-size: 4.5rem; /* Adjust font size for smaller screens */
+        line-height: 0.9;
+        letter-spacing: -2px;
+    }
+
+    .quote-area i {
+        font-size: 20px; /* Adjust font size for smaller screens */
+    }
+
+    .quote-area .quote {
+        font-size: 24px; /* Adjust font size for smaller screens */
+    }
+
+    .content .author {
+        font-size: 18px; /* Adjust font size for smaller screens */
+        margin-top: 15px; /* Adjust margin top for smaller screens */
+    }
+}
