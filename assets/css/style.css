@@ -124,7 +124,7 @@ header, .content :where(i, p, span){
 .quote-area .quote {
     font-size: 30px;
     text-align: center;
-    word-break: break-all;
+    word-break: break-word;
 }
 
 /* Author styles */
@@ -223,6 +223,10 @@ ul .speech.active {
         letter-spacing: -2px;
     }
 
+    .wrapper header {
+        font-size: 30px;
+    }
+
     .quote-area i {
         font-size: 20px; /* Adjust font size for smaller screens */
     }
@@ -234,5 +238,9 @@ ul .speech.active {
     .content .author {
         font-size: 18px; /* Adjust font size for smaller screens */
         margin-top: 15px; /* Adjust margin top for smaller screens */
+    }
+
+    .buttons button {
+        padding: 10px 15px;
     }
 }
