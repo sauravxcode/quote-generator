@@ -221,6 +221,7 @@ ul .speech.active {
         font-size: 4.5rem; /* Adjust font size for smaller screens */
         line-height: 0.9;
         letter-spacing: -2px;
+        margin-bottom: 25px;
     }
 
     .wrapper header {
